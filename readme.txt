@@ -30,7 +30,9 @@ This PDF Block takes advantage of browser's native support of PDFs, allowing use
 
 === Contributors & Developers ===
 
-“PDF Block” is open source software. The following people have contributed to this plugin.
+“PDF Block” is open source software. Learn more about the project on GitHub: https://github.com/henryholtgeerts/pdf-block
+
+The plugin was created and is maintained by Henry Holtgeerts.
 
 henryholtgeerts
 
