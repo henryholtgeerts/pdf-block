@@ -1,7 +1,7 @@
 === PDF Block ===
 Contributors: Henry Holtgeerts
 Donate link: http://link.for/allowing/users/give/you/money
-Tags: PDF, file, block, Gutenberg, editor, simple
+Tags: PDF, file, block, Gutenberg, editor, embed
 Requires at least: 5.0
 Tested up to: 5.4.2
 Stable tag: 1.0
