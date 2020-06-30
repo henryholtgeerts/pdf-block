@@ -3,9 +3,34 @@ Contributors: Henry Holtgeerts
 Donate link: http://link.for/allowing/users/give/you/money
 Tags: PDF, file, block, Gutenberg, editor, simple
 Requires at least: 5.0
-Tested up to: 5.5
+Tested up to: 5.4.2
 Stable tag: 1.0
 License: GPLv2+
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
 The simple, no-frills block to easily embed PDF files on your WordPress site.
+
+=== Description ===
+
+The simple, no-frills block to easily embed PDF files on your WordPress site. 100% free, fully responsive and built for the Gutenberg Editor. 
+
+Quickly add PDFs from your media library, or paste a URL. This PDF Block is based on the Image Block for Gutenberg, and maintains tremendous ease of use.
+
+Options:
+- Adjust PDF height
+- Change PDF URL (from Media Library, or copy/paste one manually)
+- Show or Hide PDF toolbar
+
+Compatibility:
+– Fully responsive
+– Works fine on Chrome, Firefox, Opera, Edge and IE11
+– Does not require Javascript for users to see PDFs
+
+This PDF Block takes advantage of browser's native support of PDFs, allowing users to view and interact with your PDFs without the need for any Javascript.
+
+=== Contributors & Developers ===
+
+“PDF Block” is open source software. The following people have contributed to this plugin.
+
+henryholtgeerts
+
