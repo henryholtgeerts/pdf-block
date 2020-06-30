@@ -5,7 +5,7 @@
  * Enqueue CSS/JS of all the blocks.
  *
  * @since   1.0.0
- * @package CGB
+ * @package PDFB
  */
 
 // Exit if accessed directly.
@@ -27,10 +27,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
  */
-function pdf_block_cgb_block_assets() { // phpcs:ignore
+function pdfb_block_assets() { // phpcs:ignore
 	// Register block styles for both frontend + backend.
 	wp_register_style(
-		'pdf_block-cgb-style-css', // Handle.
+		'pdfb-style-css', // Handle.
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ), // Block style CSS.
 		is_admin() ? array( 'wp-editor' ) : null, // Dependency to include the CSS after it.
 		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' ) // Version: File modification time.
@@ -38,7 +38,7 @@ function pdf_block_cgb_block_assets() { // phpcs:ignore
 
 	// Register block editor script for backend.
 	wp_register_script(
-		'pdf_block-cgb-block-js', // Handle.
+		'pdfb-block-js', // Handle.
 		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ), // Block.build.js: We register the block here. Built with Webpack.
 		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ), // Dependencies, defined above.
 		null, // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
@@ -47,7 +47,7 @@ function pdf_block_cgb_block_assets() { // phpcs:ignore
 
 	// Register block editor styles for backend.
 	wp_register_style(
-		'pdf_block-cgb-block-editor-css', // Handle.
+		'pdfb-editor-css', // Handle.
 		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ), // Block editor CSS.
 		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it.
 		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' ) // Version: File modification time.
@@ -55,8 +55,8 @@ function pdf_block_cgb_block_assets() { // phpcs:ignore
 
 	// WP Localized globals. Use dynamic PHP stuff in JavaScript via `cgbGlobal` object.
 	wp_localize_script(
-		'pdf_block-cgb-block-js',
-		'cgbGlobal', // Array containing dynamic data for a JS Global.
+		'pdfb-js',
+		'pdfbGlobal', // Array containing dynamic data for a JS Global.
 		[
 			'pluginDirPath' => plugin_dir_path( __DIR__ ),
 			'pluginDirUrl'  => plugin_dir_url( __DIR__ ),
@@ -75,16 +75,16 @@ function pdf_block_cgb_block_assets() { // phpcs:ignore
 	 * @since 1.16.0
 	 */
 	register_block_type(
-		'cgb/block-pdf-block', array(
+		'pdfb/pdf-block', array(
 			// Enqueue blocks.style.build.css on both frontend & backend.
-			'style'         => 'pdf_block-cgb-style-css',
+			'style'         => 'pdfb-style-css',
 			// Enqueue blocks.build.js in the editor only.
-			'editor_script' => 'pdf_block-cgb-block-js',
+			'editor_script' => 'pdfb-block-js',
 			// Enqueue blocks.editor.build.css in the editor only.
-			'editor_style'  => 'pdf_block-cgb-block-editor-css',
+			'editor_style'  => 'pdfb-editor-css',
 		)
 	);
 }
 
 // Hook: Block assets.
-add_action( 'init', 'pdf_block_cgb_block_assets' );
+add_action( 'init', 'pdfb_block_assets' );

@@ -1,15 +1,15 @@
 <?php
 /**
- * Plugin Name: pdf-block — CGB Gutenberg Block Plugin
+ * Plugin Name: PDF Block
  * Plugin URI: https://github.com/ahmadawais/create-guten-block/
- * Description: pdf-block — is a Gutenberg plugin created via create-guten-block.
- * Author: mrahmadawais, maedahbatool
- * Author URI: https://AhmadAwais.com/
+ * Description: The simple, no-frills block to easily embed PDF files on your WordPress site.
+ * Author: henryholtgeerts
+ * Author URI: https://henryholtgeerts.com
  * Version: 1.0.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
- * @package CGB
+ * @package PDFB
  */
 
 // Exit if accessed directly.

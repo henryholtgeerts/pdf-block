@@ -93,15 +93,14 @@ registerBlockType( 'pdfb/pdf-block', {
 			})
 		}
 
-		// Creates a <p class='wp-block-cgb-block-pdf-block'></p>.
 		return (
 			<Fragment>
 				<InspectorControls>
-					<PanelBody title={ __( 'Options', 'pdf-block' ) } >
+					<PanelBody title={ __( 'Options', 'pdfb' ) } >
 						<PanelRow>
 							<TextControl
 								className="pdfb-textcontrol"
-								label={ __( 'PDF File (URL)', 'pdf-block' ) }
+								label={ __( 'PDF File (URL)', 'pdfb' ) }
 								value={ attributes.url }
 								onChange={ ( value ) => setAttributes( {url: value } ) }
 							/>
@@ -135,7 +134,7 @@ registerBlockType( 'pdfb/pdf-block', {
 								<PanelRow>
 									<TextControl
 										className="pdfb-textcontrol"
-										label={ __( 'Height (in pixels)', 'pdf-block' ) }
+										label={ __( 'Height (in pixels)', 'pdfb' ) }
 										type="number"
 										min={ 100 }
 										step= { 50 }
@@ -145,7 +144,7 @@ registerBlockType( 'pdfb/pdf-block', {
 								</PanelRow>
 								<PanelRow className="pdfb-panelrow">
 									<ToggleControl
-										label={ __( 'Show Toolbar', 'pdf-block' ) }
+										label={ __( 'Show Toolbar', 'pdfb' ) }
 										checked={ attributes.showToolbar }
 										onChange={ ( value ) => {
 											setAttributes( {showToolbar: value} );
@@ -186,7 +185,7 @@ registerBlockType( 'pdfb/pdf-block', {
 					) : (
 						<div className="pdfb-message">
 							<div className="pdfb-heading">
-								{ __('Choose a PDF File to get started.', 'pdf-block')}
+								{ __('Choose a PDF File to get started.', 'pdfb')}
 							</div>
 							<div className="pdfb-actions">
 								<MediaUpload 
@@ -202,7 +201,7 @@ registerBlockType( 'pdfb/pdf-block', {
 												isSecondary
 												onClick={open}
 											>
-												{ __('Upload PDF File', 'pdf-block') }
+												{ __('Upload PDF File', 'pdfb') }
 											</Button>
 										)
 									}}
@@ -211,7 +210,7 @@ registerBlockType( 'pdfb/pdf-block', {
 									isSecondary
 									onClick={ () => setShowUrlPopover(true) }
 								>
-									{ __('Insert From URL', 'pdf-block') }
+									{ __('Insert From URL', 'pdfb') }
 									{ showUrlPopover && (
 										<Popover
 											className="pdfb-popover"
@@ -220,7 +219,7 @@ registerBlockType( 'pdfb/pdf-block', {
 										>
 											<TextControl
 												className="pdfb-popover-textcontrol"
-												placeholder={ __('Paste or type URL', 'pdf-block') }
+												placeholder={ __('Paste or type URL', 'pdfb') }
 												value={ temporaryUrl }
 												type="url"
 												onChange={ (value) => setTemporaryUrl(value) }
