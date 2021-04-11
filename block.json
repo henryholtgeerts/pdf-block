@@ -1,7 +1,7 @@
 {
     "name": "pdfb/pdf-block",
     "title": "PDF",
-    "description": "Easily embed PDFs from your Media Library or any URL. Disable PDF toolbars, set alignment and control height.",
+    "description": "Easily embed PDFs from your Media Library or any URL. Hide PDF toolbars, set alignment and control height.",
     "category": "embed",
     "keywords": [ "pdf", "embed", "file", "oembed", "viewer" ],
     "attributes": {

@@ -1,6 +1,6 @@
 === PDF Block ===
 Contributors: Henry Holtgeerts
-Donate link: http://link.for/allowing/users/give/you/money
+Donate link: https://ko-fi.com/henryland
 Tags: PDF, file, block, Gutenberg, editor, embed
 Requires at least: 5.0
 Tested up to: 5.7
