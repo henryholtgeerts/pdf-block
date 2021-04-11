@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@wordpress/components": "^9.9.0",
-    "@wordpress/icons": "^2.3.0",
+    "@wordpress/icons": "^2.10.1",
     "cgb-scripts": "1.23.0"
   }
 }

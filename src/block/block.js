@@ -42,13 +42,15 @@ const { isURL } = wp.url;
  */
 registerBlockType( 'pdfb/pdf-block', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'PDF Block' ), // Block title.
-	icon: 'media-document', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+	title: __( 'PDF' ), // Block title.
+	icon: 'pdf', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'embed', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
-		__( 'PDF Block' ),
-		__( 'Embed' ),
-		__( 'File' ),
+		__( 'PDF' ),
+		__( 'embed' ),
+		__( 'file' ),
+		__( 'viewer' ),
+		__( 'oembed' ),
 	],
 	attributes: {
 		showToolbar: {
@@ -64,7 +66,16 @@ registerBlockType( 'pdfb/pdf-block', {
 			default: 1015
 		}
 	},
-
+	example: {
+		attributes: {
+			showToolbar: false,
+			url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+			height: 615,
+		},
+	},
+	supports: {
+		align: ['wide', 'full']
+	},
 	/**
 	 * The edit function describes the structure of your block in the context of the editor.
 	 * This represents what the editor will render when the block is used.
@@ -84,13 +95,6 @@ registerBlockType( 'pdfb/pdf-block', {
 
 		const toggleUrlPopover = () => {
 			setShowUrlPopover( !showUrlPopover )
-		}
-
-		function selectImage(value) {
-			console.log(value);
-			setAttributes({
-				imgUrl: value.sizes.full.url,
-			})
 		}
 
 		return (
